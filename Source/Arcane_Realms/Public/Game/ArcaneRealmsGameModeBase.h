@@ -3,16 +3,15 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Character/BaseCharacter.h"
-#include "AuraCharacter.generated.h"
+#include "GameFramework/GameModeBase.h"
+#include "ArcaneRealmsGameModeBase.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class ARCANE_REALMS_API AAuraCharacter : public ABaseCharacter
+class ARCANE_REALMS_API AArcaneRealmsGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-public:
-	AAuraCharacter();
+	
 };
