@@ -3,11 +3,18 @@
 
 #include "Character/EnemyCharacter.h"
 
+#include "AbilitySystem/ARAbilitySystemComponent.h"
+#include "AbilitySystem/ARAttributeSet.h"
 #include "Arcane_Realms/Arcane_Realms.h"
 
 AEnemyCharacter::AEnemyCharacter()
 {
 	GetMesh()->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+
+	AbilitySystemComponent = CreateDefaultSubobject<UARAbilitySystemComponent>("AbilitySystemComponent");
+	AbilitySystemComponent->SetIsReplicated(true);
+
+	AttributeSet = CreateDefaultSubobject<UARAttributeSet>("AttributeSet");
 }
 
 void AEnemyCharacter::HighlightActor()
