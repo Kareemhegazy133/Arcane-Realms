@@ -1,9 +1,9 @@
-#include "ARAttributeSet.h"
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "AbilitySystem/ARAttributeSet.h"
 #include "AbilitySystemComponent.h"
+#include "Net/UnrealNetwork.h"
 
 UARAttributeSet::UARAttributeSet()
 {
