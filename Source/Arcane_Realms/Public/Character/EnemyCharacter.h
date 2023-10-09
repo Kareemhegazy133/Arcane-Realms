@@ -16,8 +16,12 @@ class ARCANE_REALMS_API AEnemyCharacter : public ABaseCharacter, public IEnemyIn
 	GENERATED_BODY()
 public:
 	AEnemyCharacter();
+
+	/** Enemy Interface */
 	virtual void HighlightActor() override;
 	virtual void UnHighlightActor() override;
+	/** end Enemy Interface */
 
-
+protected:
+	virtual void BeginPlay() override;
 };

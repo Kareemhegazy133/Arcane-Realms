@@ -15,4 +15,8 @@ class ARCANE_REALMS_API AAuraCharacter : public ABaseCharacter
 	GENERATED_BODY()
 public:
 	AAuraCharacter();
+	virtual void PossessedBy(AController* NewController) override;
+	virtual void OnRep_PlayerState() override;
+private:
+	void InitAbilityActorInfo();
 };
